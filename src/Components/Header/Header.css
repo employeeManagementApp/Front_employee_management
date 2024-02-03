@@ -3,7 +3,7 @@
     padding: 0;
 }
 .NavigationBar{
-   position:fixed;
+  
     width: 100%;
     height: 10vh;
     display: flex;
@@ -20,10 +20,11 @@
     align-items: center;
     padding: 0 1%;
     margin-left: 1%;
+
 }
 .Navigation{
 
-    width: 13%;
+    width: 11%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

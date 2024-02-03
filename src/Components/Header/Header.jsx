@@ -14,7 +14,7 @@ function Header () {
                  <nav className="Navigation">
                    <a href=""><IoIosSearch class="search" /></a>
                    <a href="">UPLOAD</a>
-                   <a href="">LOGIN</a>
+                   <a href="http://localhost:3000/HOME">LOGIN</a>
                  </nav>
 
             </div>

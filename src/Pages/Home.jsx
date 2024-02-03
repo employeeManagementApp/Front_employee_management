@@ -1,7 +1,7 @@
 import React from "react";
 import '../Components/Header/Header.jsx'
 import Header from "../Components/Header/Header.jsx";
-import background from "../Components/image/background.jpg";
+import LoginForm from "../Components/Form/LoginFom.jsx";
 import './Home.css';
 
 const Home = ()=>{
@@ -9,7 +9,6 @@ const Home = ()=>{
       <div>
         <Header></Header>
        <main>
-        <img src={background} alt="" class="image"/>
        </main>
       
       </div> 
