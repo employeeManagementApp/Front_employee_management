@@ -1,7 +1,7 @@
 import React from "react";
 import '../Components/Header/Header.jsx'
 import Header from "../Components/Header/Header.jsx";
-import legend from "../Components/image/legend-min.jpg";
+import background from "../Components/image/background.jpg";
 import './Home.css';
 
 const Home = ()=>{
@@ -9,7 +9,7 @@ const Home = ()=>{
       <div>
         <Header></Header>
        <main>
-        <img src={legend} alt="" class="image"/>
+        <img src={background} alt="" class="image"/>
        </main>
       
       </div> 

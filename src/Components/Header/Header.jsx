@@ -1,15 +1,18 @@
 import React from "react";
 import './Header.css';
+import { TfiAlignJustify } from "react-icons/tfi";
+import { IoIosSearch } from "react-icons/io";
+
 function Header () {
     return(
         <header>
             <div className="NavigationBar">
                 <div className="Logo">
-                    <div>X</div>
+                    <div><TfiAlignJustify /></div>
                     <h3>UPLABS</h3>
                 </div>
                  <nav className="Navigation">
-                   <a href="">X</a>
+                   <a href=""><IoIosSearch class="search" /></a>
                    <a href="">UPLOAD</a>
                    <a href="">LOGIN</a>
                  </nav>
