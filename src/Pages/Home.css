@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
 }
-.image{
-    width: 100%;
-  height: 100vh;
-}
+body {
+    background: no-repeat url('../Components/image/background.jpg');
+    background-size: cover;
+ }
+ 
+   
+   
