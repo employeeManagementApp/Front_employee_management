@@ -4,15 +4,15 @@ import Header from "../Components/Header/Header.jsx";
 import LoginForm from "../Components/Form/LoginFom.jsx";
 import './Home.css';
 
-const Home = ()=>{
-    return(
-      <div>
-        <Header></Header>
-       <main>
-       </main>
-      
-      </div> 
-    )
+const Home = () => {
+  return (
+    <div>
+      <Header></Header>
+      <main>
+      </main>
+
+    </div>
+  )
 }
 
 export default Home

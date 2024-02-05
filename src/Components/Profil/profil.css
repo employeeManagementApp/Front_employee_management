@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 
-.profil{
-    background-color: red;
+.profil {
+    background-color: rgba(187, 227, 253, 0.851);
     display: flex;
     flex-direction: row;
     border-radius: 20px;
@@ -13,7 +13,8 @@
     height: 95vh;
     margin: 2vh auto;
 }
-.section1{
+
+.section1 {
     background-color: blue;
     width: 5%;
     border-top-left-radius: 20px;
@@ -22,51 +23,118 @@
     flex-direction: column;
     align-items: center;
 }
-.section1 .first{
+
+.section1 .first {
     height: 12%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
 }
-.linedouble{
+
+.linedouble {
     color: white;
     font-size: medium;
 
-    }
-.section1 .second{
-   
+}
+
+.section1 .second {
+
     height: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
 }
-.circle{
-    font-size:x-large;
-    color:white;
+
+.circle {
+    font-size: x-large;
+    color: white;
 }
-.section1 .third{
-   
+
+.section1 .third {
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 23%;
 
 }
-.menu{
+
+.menu {
     font-size: medium;
     color: white;
 }
-.section1 .forth{
- 
+
+.section1 .forth {
+
     height: 55%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
 }
-.rectangle{
+
+.rectangle {
     color: white;
     font-size: medium;
+}
+.section2{
+    width: 95%;
+}
+.top{
+    
+    width: 90%;
+  height: 10%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.search{
+    
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.notiMessage{
+    
+    width: 7%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+
+select{
+    border: none;
+    background-color: transparent;
+    outline: none;
+
+}
+input{
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+input::placeholder {
+    color: rgba(0, 0, 0, 0.988);
+}
+.search .icon{
+    font-size: smaller;
+    font-weight: bold;
 }
