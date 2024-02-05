@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.profil{
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    width: 99%;
+    height: 95vh;
+    margin: 2vh auto;
+}
+.section1{
+    background-color: blue;
+    width: 5%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section1 .first{
+    height: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.linedouble{
+    color: white;
+    font-size: medium;
+
+    }
+.section1 .second{
+   
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.circle{
+    font-size:x-large;
+    color:white;
+}
+.section1 .third{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 23%;
+
+}
+.menu{
+    font-size: medium;
+    color: white;
+}
+.section1 .forth{
+ 
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.rectangle{
+    color: white;
+    font-size: medium;
+}
