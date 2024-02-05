@@ -1,6 +1,6 @@
 import React from "react";
 import './Page.css';
-import Profil from '../Components/Profil/profil.jsx';
+import Profil from '../Components/Profil/Profil.jsx';
 
 
 const Page = () => {

@@ -6,10 +6,8 @@ import LoginForm from "../Components/Form/LoginFom.jsx";
 const LoginPage = () => {
   return (
     <div>
-      <Header></Header>
-      <main>
+      {/*<Header></Header>*/}
         <LoginForm></LoginForm>
-      </main>
     </div>
   )
 }

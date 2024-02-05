@@ -5,17 +5,18 @@
 
 
 .profil {
-    background-color: rgba(187, 227, 253, 0.851);
+    background-color: rgba(236, 236, 236, 0.85);
     display: flex;
     flex-direction: row;
     border-radius: 20px;
-    width: 99%;
-    height: 95vh;
-    margin: 2vh auto;
+    width: 94%;
+    height: 92vh;
+    margin: 4vh auto;
+    box-shadow: 1px 1px 19px #999999eb;
 }
 
 .section1 {
-    background-color: blue;
+    background-color: #8585ee;
     width: 5%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -137,4 +138,51 @@ input::placeholder {
 .search .icon{
     font-size: smaller;
     font-weight: bold;
+}
+.middle{
+    width: 90%;
+    height: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.middle-left{
+    width: 28%;
+    box-shadow: 1px 1px 12px #dbdbdb8c;
+    border-radius: 10px;
+    background: #ffffffa1;
+}
+.middle-right{
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.right-top{
+    width: 100%;
+    height: 27vh;
+    display: flex;
+    justify-content: space-between;
+}
+.right-bottom{
+    width: 100%;
+    height: 45vh;
+    box-shadow: 1px 1px 12px #dbdbdb8c;
+    border-radius: 10px;
+    background: #ffffffa1;
+}
+.rt-left{
+    width: 47%;
+    height: 100%;
+    box-shadow: 1px 1px 12px #dbdbdb8c;
+    border-radius: 10px;
+    background: #ffffffa1;
+}
+.rt-right{
+    width: 47%;
+    height: 100%;
+    box-shadow: 1px 1px 12px #dbdbdb8c;
+    border-radius: 10px;
+    background: #ffffffa1;
 }

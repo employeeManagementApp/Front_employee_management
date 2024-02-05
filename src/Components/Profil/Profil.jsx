@@ -11,7 +11,7 @@ import { FiMessageCircle } from "react-icons/fi";
 import { IoMdNotifications } from "react-icons/io";
 
 
-function profil() {
+function Profil() {
     return (
 
         <main>
@@ -50,10 +50,28 @@ function profil() {
                             <a href=""><FiMessageCircle /></a><a href=""><IoMdNotifications /></a>
                         </div>
                     </div>
+                    <div className="middle">
+                        <div className="middle-left">
+
+                        </div>
+                        <div className="middle-right">
+                            <div className="right-top">
+                                <div className="rt-left">
+
+                                </div>
+                                <div className="rt-right">
+
+                                </div>
+                            </div>
+                            <div className="right-bottom">
+
+                            </div>
+                        </div>
+                    </div>
 
                 </section>
             </div>
         </main>
     )
 }
-export default profil
+export default Profil

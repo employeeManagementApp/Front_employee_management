@@ -5,6 +5,7 @@ import NotFound from '../Pages/NotFound.jsx';
 import LoginPage from '../Pages/LoginPage.jsx';
 import Home from '../Pages/Home.jsx';
 import Page from '../Pages/Page.jsx';
+import Profil from '../Components/Profil/Profil.jsx';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <Route exact path='/home' element={<Home></Home>}/>
     <Route exact path='/*' element={<NotFound></NotFound>}/>
     <Route exact path='/page'element={<Page></Page>}/>
+    <Route exact path='/profil' element={<Profil></Profil>}></Route>
   </Routes>
 </Router>
   );

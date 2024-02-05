@@ -9,7 +9,7 @@
 }
 
 body {
-    background: no-repeat url('../image/background.jpg');
+    /*background: no-repeat url('../image/background.jpg');*/
     background-size: cover;
 }
 
@@ -18,9 +18,10 @@ body {
     background-color: white;
     width: 70%;
     height: 85vh;
-    margin: 2vh auto;
+    margin: 7vh auto;
     display: flex;
     flex-direction: row;
+    box-shadow: 1px 1px 15px #aaa;
 
 }
 
@@ -104,27 +105,27 @@ body {
 
 .remember-forgot a {
     text-decoration: none;
-    color: rgba(153, 53, 247, 0.913);
+    color: rgb(93, 95, 234);
     font-size: small;
     font-weight: bold;
 }
 
 .loginform button {
-    position: relative;
-    width: 23%;
-    height: 36px;
-    margin: 50px auto;
-    align-self: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 15px;
-    box-shadow: rgba(188, 70, 239, 0.595) 0px 13px 27px -5px, rgba(233, 62, 230, 0.438) 0px 8px 16px -8px;
-    background-color: rgb(196, 39, 244);
-    color: white;
-    font-weight: lighter;
-    cursor: pointer;
+  position: relative;
+  width: 23%;
+  height: 36px;
+  margin: 50px auto;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 15px;
+  box-shadow: rgba(142, 142, 142, 0.6) 0px 13px 27px -5px, rgba(43, 43, 43, 0.44) 0px 8px 16px -8px;
+  background-color: rgb(93, 95, 234);
+  color: white;
+  /*font-weight: lighter;*/
+  cursor: pointer;
 }
 
 .iconButton {

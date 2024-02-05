@@ -23,9 +23,9 @@ function LoginForm() {
                     </div>
                     <button type='submit'>Login <FaAngleRight className="iconButton" /></button>
 
-                    <div className="register-link">
+                    {/*<div className="register-link">
                         <p>Don't have an account yeat? <a href="">Sign up</a></p>
-                    </div>
+                    </div>*/}
                 </form>
             </div>
             <div class="img"></div>
