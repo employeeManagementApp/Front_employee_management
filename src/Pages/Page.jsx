@@ -3,13 +3,13 @@ import './Page.css';
 import Profil from '../Components/Profil/profil.jsx';
 
 
-const Page = ()=> {
-    return(
-     
-      
-     <Profil></Profil>
-    
-    
+const Page = () => {
+    return (
+
+
+        <Profil></Profil>
+
+
     )
 }
 
