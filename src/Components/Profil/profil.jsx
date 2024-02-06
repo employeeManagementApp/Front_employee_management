@@ -17,6 +17,8 @@ function profil() {
         <main>
             <div class="profil">
                 <section class="section1">
+                                    {/* Navbar verticale à gauche */}
+
                     <div class="first">
                         <a href=""> <TfiLineDouble class="linedouble" /> </a>
                     </div>
@@ -31,7 +33,9 @@ function profil() {
                     </div>
                     <div class="forth"><HiOutlineArrowRightOnRectangle class="rectangle" /></div>
                 </section>
+                <div className="right-container">
                 <section class="section2">
+                    {/* Première div avec une sorte de navbar horizontale en haut */}
                     <div class="top">
                         <div class="title">
                             <h1>Overview</h1>
@@ -52,6 +56,32 @@ function profil() {
                     </div>
 
                 </section>
+                    <div className="employee-info-container">
+                        <div className="employee-info-left">
+                            <div className="namecontainer">
+                                <h1>Patrick Kennedy</h1>
+                                <div className="photo-container">
+                                    <img src="url_de_la_photo" alt="Photo de l'employé" />
+                                </div>
+                            </div>
+                            <div className="emailcontainer">
+                                <p>email: exemple email</p>
+                            </div>
+                            <div><p>graph</p></div>
+                            <div><p>stat comportement</p></div>
+                        </div>
+                        <div className="employee-info-right">
+                            <div className="xxx">
+                                <div className="projectinprogresscontainer"><h1>projjection</h1></div>
+                                <div className="competitionratecontainer"><h1>competitionrate</h1></div>
+                                <div className="bundlestudiocontainer"><h1>bundlestudio</h1></div>
+                            </div>
+                            <div className="dateholder"><h1>date</h1></div>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </main>
     )
