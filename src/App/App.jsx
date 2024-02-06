@@ -6,6 +6,7 @@ import LoginPage from '../Pages/LoginPage.jsx';
 import Home from '../Pages/Home.jsx';
 import Page from '../Pages/Page.jsx';
 import Profil from '../Components/Profil/Profil.jsx';
+import PrivateRoute from '../Components/PrivateRoute.jsx';
 
 
 function App() {
@@ -13,10 +14,9 @@ function App() {
 <Router>
   <Routes>
   <Route exact path='/' element={<LoginPage></LoginPage>}/>
-    <Route exact path='/home' element={<Home></Home>}/>
+  <Route path='/home' element={<PrivateRoute Component={Home}></PrivateRoute>} />
     <Route exact path='/*' element={<NotFound></NotFound>}/>
-    <Route exact path='/page'element={<Page></Page>}/>
-    <Route exact path='/profil' element={<Profil></Profil>}></Route>
+    <Route path='/page' element={<PrivateRoute Component={Page}></PrivateRoute>} />
   </Routes>
 </Router>
   );
