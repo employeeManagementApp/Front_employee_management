@@ -8,3 +8,7 @@
     flex-direction: column;
     padding-left: 5%;
 }
+.own-agenda{
+    width: 91% !important;
+    margin-bottom: 1rem;
+}

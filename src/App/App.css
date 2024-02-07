@@ -1,0 +1,21 @@
+.fc-view-harness{
+    height: 47px !important;
+}
+.fc-toolbar-title{
+    font-size: 20px !important;
+    padding-left: 1rem !important;
+}
+.fc-today-button{
+    width: 70px !important;
+    height: 35px !important;
+    margin-top: 1rem !important;
+}
+.fc-button-group{
+    margin-top: 1rem !important;
+}
+.fc-next-button, .fc-prev-button{
+    height: 35px !important;
+}
+.fc-icon{
+    padding-bottom: 3rem !important;
+}

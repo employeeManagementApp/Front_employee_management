@@ -26,7 +26,7 @@ const data = {
 const MyChart = () => (
     <div className="Data"> 
         <h2 className="analyse">Growth Analyse</h2> 
-        <Line data={data} />
+        <Line className='own-agenda' data={data} />
     </div>
 );
 

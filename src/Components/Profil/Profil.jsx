@@ -10,7 +10,9 @@ import { HiOutlineArrowRightOnRectangle } from "react-icons/hi2";
 import { FiMessageCircle } from "react-icons/fi";
 import { IoMdNotifications } from "react-icons/io";
 import Chartt from "../Chart/chart.js";
-import Chart2 from "../Chart2/chart2.js"
+import Chart2 from "../Chart2/chart2.js";
+import Calendar from "../Calendar/Calendar";
+import Avatar from "../../pictures/avatar.png"
 
 
 function Profil() {
@@ -59,7 +61,7 @@ function Profil() {
                             <h3 class="name">Patrick Kennedy</h3>
                             <p class="email">hei.Patrick@gmail.com</p>
                          </div>
-                         <div class="photo"><img src="" alt="" class="imge" /></div>
+                         <div class="photo"><img src={Avatar} alt="" class="imge" /></div>
                          
                        </div>
                        <Chartt></Chartt>
@@ -75,7 +77,7 @@ function Profil() {
                                 </div>
                             </div>
                             <div className="right-bottom">
-
+                            <Calendar></Calendar>
                             </div>
                         </div>
                     </div>

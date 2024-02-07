@@ -29,7 +29,7 @@ const data = {
   };
   const RadarChart = () => (
     <div class="radar">
-        <Radar data={data} />
+        <Radar className='radar-img' data={data} />
     </div>
 );
 
