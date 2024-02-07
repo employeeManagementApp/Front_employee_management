@@ -186,3 +186,36 @@ input::placeholder {
     border-radius: 10px;
     background: #ffffffa1;
 }
+.middle-left .person-profil{
+    width: 90%;
+    height: 18vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.name-email{
+    width: 70%;
+    height: 50%;
+    margin-top: 5%;
+}
+.photo{
+    width: 20%;
+    height: 43%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    
+}
+.name{
+margin-bottom: 4px;
+}
+.email{
+    font-size: small;
+}
+
+

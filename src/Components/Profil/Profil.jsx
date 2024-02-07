@@ -9,6 +9,8 @@ import { CiSettings, CiSearch } from "react-icons/ci";
 import { HiOutlineArrowRightOnRectangle } from "react-icons/hi2";
 import { FiMessageCircle } from "react-icons/fi";
 import { IoMdNotifications } from "react-icons/io";
+import Chartt from "../Chart/chart.js";
+import Chart2 from "../Chart2/chart2.js"
 
 
 function Profil() {
@@ -52,7 +54,16 @@ function Profil() {
                     </div>
                     <div className="middle">
                         <div className="middle-left">
-
+                       <div class="person-profil">
+                         <div class='name-email'>
+                            <h3 class="name">Patrick Kennedy</h3>
+                            <p class="email">hei.Patrick@gmail.com</p>
+                         </div>
+                         <div class="photo"><img src="" alt="" class="imge" /></div>
+                         
+                       </div>
+                       <Chartt></Chartt>
+                       <Chart2></Chart2>
                         </div>
                         <div className="middle-right">
                             <div className="right-top">
