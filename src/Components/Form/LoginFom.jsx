@@ -6,13 +6,14 @@ import axios from 'axios';
 import { CiUser } from "react-icons/ci";
 import { CiLock } from "react-icons/ci";
 import { FaAngleRight } from "react-icons/fa";
-
+import { jwtDecode } from "jwt-decode";
 
 function LoginForm(){
    const navigate = useNavigate()
    const baseUrl = process.env.REACT_APP_BASE_URL;
    const [user, setUser] = useState({
    })
+   const [err, setErr]=useState()
 
    const handleSubmit = async (e) => {
        e.preventDefault();
@@ -25,9 +26,15 @@ function LoginForm(){
            localStorage.setItem('ematoken', tokenString)
            //console.log(response.data)
            console.log(tokenString)
-           navigate('/page')
+           const decodedToken = jwtDecode(response.data)
+           if(decodedToken.role == 'Employe'){
+            navigate('/page')
+           }else{
+            navigate('/backoffice')
+           }
        }catch(err){
            console.log(err)
+           setErr(err)
        }
    }
    return (
@@ -49,6 +56,9 @@ function LoginForm(){
                <label><input type="checkbox" name="" id="" /> Remember me</label> 
                <a href="">Forgot password ?</a>
            </div>
+           {err && (
+            <p className="error-message">Email or password is wrong</p>
+           )}
            <button type='submit'>Login <FaAngleRight className="iconButton" /></button>
 
           {/*<div className="register-link">
