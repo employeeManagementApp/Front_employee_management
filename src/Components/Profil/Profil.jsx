@@ -13,9 +13,28 @@ import Chartt from "../Chart/chart.js";
 import Chart2 from "../Chart2/chart2.js";
 import Calendar from "../Calendar/Calendar";
 import Avatar from "../../pictures/avatar.png"
-
+import { useState , useEffect } from "react";
+import { jwtDecode } from "jwt-decode";
+import axios from "axios";
 
 function Profil() {
+    const [user, setUser] = useState()
+    const [error, setError] = useState()
+    const baseUrl = process.env.REACT_APP_BASE_URL; 
+  useEffect(()=>{
+    const token = localStorage.getItem('ematoken');
+    if(token){
+        const decodedToken = jwtDecode(token);
+        const userId = decodedToken.id;
+        axios.get(`${baseUrl}/user/${userId}`)
+        .then((response)=>{
+            setUser(response.data)
+        })
+        .catch((err)=>{
+            setError(err)
+        })
+    }
+  }, [])
     return (
 
         <main>
@@ -56,14 +75,16 @@ function Profil() {
                     </div>
                     <div className="middle">
                         <div className="middle-left">
-                       <div class="person-profil">
-                         <div class='name-email'>
-                            <h3 class="name">Patrick Kennedy</h3>
-                            <p class="email">hei.Patrick@gmail.com</p>
-                         </div>
-                         <div class="photo"><img src={Avatar} alt="" class="imge" /></div>
-                         
-                       </div>
+                       {user && (
+                        <div class="person-profil">
+                        <div class='name-email'>
+                               <h3 class="name">{user.firstname} {user.lastname}</h3>
+                           <p class="email">{user.email}</p>
+                        </div>
+                        <div class="photo"><img src={Avatar} alt="" class="imge" /></div>
+                        
+                      </div>
+                       )}
                        <Chartt></Chartt>
                        <Chart2></Chart2>
                         </div>
