@@ -221,5 +221,25 @@ margin-bottom: 4px;
 .email{
     font-size: small;
 }
-
-
+.pr-pg{
+    margin-left: 2rem;
+    margin-block: 2rem;
+    display: flex;
+}
+.pr-v{
+    margin-left: 2rem;
+    font-size: 30px;
+}
+.trophy{
+    color: rgb(254, 254, 254);
+}
+.trophy-content{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(243 87 122);
+    margin-right: .5rem;
+}

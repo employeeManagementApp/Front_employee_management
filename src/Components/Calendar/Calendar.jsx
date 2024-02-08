@@ -6,11 +6,11 @@ import './Calendar.css'
 const Calendar = ()=>{
     const events = [
         {
-            title: "event1",
+            title: "Meeting",
             date: "2024-02-10"
         },{
-            title: "event2",
-            date: "2024-02-09"
+            title: "Integration",
+            date: "2024-02-16"
         }
     ]
 

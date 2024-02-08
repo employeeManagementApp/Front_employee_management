@@ -16,10 +16,17 @@ import Avatar from "../../pictures/avatar.png"
 import { useState , useEffect } from "react";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { FaWrench } from "react-icons/fa";
+import ProgressBar from "../ProgressBar/ProgressBar.jsx";
+import { IoIosTrophy } from "react-icons/io";
 
 function Profil() {
     const [user, setUser] = useState()
     const [error, setError] = useState()
+    const progressValue = 36;
+    const progressValueRate = 92;
+    const navigate = useNavigate();
     const baseUrl = process.env.REACT_APP_BASE_URL; 
   useEffect(()=>{
     const token = localStorage.getItem('ematoken');
@@ -35,6 +42,10 @@ function Profil() {
         })
     }
   }, [])
+  const handleLogout = () => {
+    localStorage.removeItem('ematoken');
+    navigate('/')
+  };
     return (
 
         <main>
@@ -52,22 +63,18 @@ function Profil() {
                         <a href=""><FaUser class="menu" /></a>
                         <a href=""><CiSettings class="menu" /></a>
                     </div>
-                    <div class="forth"><HiOutlineArrowRightOnRectangle class="rectangle" /></div>
+                    <div class="forth"><HiOutlineArrowRightOnRectangle onClick={handleLogout}  class="rectangle" /></div>
                 </section>
                 <section class="section2">
                     <div class="top">
                         <div class="title">
                             <h1>Overview</h1>
                             <div class="custom-select">
-                                <select>
-                                    <option value="0">All Teams</option>
-                                    <option value="1">one person</option>
-                                    <option value="2">two person</option>
-                                </select>
+
                             </div></div>
 
                         <div class="search">
-                            <CiSearch class="icon" /><input type="text" placeholder="Search" />
+                           
                         </div>
                         <div class="notiMessage">
                             <a href=""><FiMessageCircle /></a><a href=""><IoMdNotifications /></a>
@@ -91,10 +98,14 @@ function Profil() {
                         <div className="middle-right">
                             <div className="right-top">
                                 <div className="rt-left">
-
+                                    <p className="pr-pg"> <div className="trophy-content"><FaWrench className="trophy"></FaWrench> </div> Project in progress</p>
+                                   <p className="pr-v"> {progressValue}</p>
+                                    <ProgressBar percentage={progressValue} />
                                 </div>
                                 <div className="rt-right">
-
+                                    <p className="pr-pg"> <div className="trophy-content"><IoIosTrophy className="trophy"></IoIosTrophy></div> Competition rate</p>
+                                    <p className="pr-v"> %{progressValueRate}</p>
+                                    <ProgressBar percentage={progressValueRate} />
                                 </div>
                             </div>
                             <div className="right-bottom">
