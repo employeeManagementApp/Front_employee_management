@@ -19,11 +19,13 @@ import './BackOfficeComponent.css'
 import BackOffice from "../../Pages/BackOffice.jsx";
 import {ActionList} from './ActionList.jsx'
 import DefaultField from "./UtilsComponent/DefaultField/DefaultField.jsx";
+import { useNavigate } from "react-router-dom";
 
 function BackOfficeComponent() {
     const [selectedItem, setSelectedItem] = useState(null);
     const [user, setUser] = useState()
     const [error, setError] = useState()
+    const navigate = useNavigate()
     const baseUrl = process.env.REACT_APP_BASE_URL; 
 
     const handleItemClick = (item) => {
@@ -44,6 +46,11 @@ function BackOfficeComponent() {
         })
     }
   }, [])
+
+  const handleLogout = () => {
+    localStorage.removeItem('ematoken');
+    navigate('/')
+  };
     return (
 
         <main>
@@ -61,7 +68,7 @@ function BackOfficeComponent() {
                         <a href=""><FaUser class="menu" /></a>
                         <a href=""><CiSettings class="menu" /></a>
                     </div>
-                    <div class="forth"><HiOutlineArrowRightOnRectangle class="rectangle" /></div>
+                    <div class="forth"><HiOutlineArrowRightOnRectangle class="rectangle" onClick={handleLogout} /></div>
                 </section>
                 <section class="section2">
                     <div class="top">
@@ -87,11 +94,12 @@ function BackOfficeComponent() {
                            <p class="email">{user.email}</p>
                         </div>
                         <div class="photo"><img src={Avatar} alt="" class="imge" /></div>
-                        
                       </div>
+                        
                        )}
+                       <div className="underline"></div>
                         {ActionList.map((element)=>(
-                            <li className="list-action" key={element.id} onClick={()=>handleItemClick(element)}>
+                            <li className={`list-action ${selectedItem === element ? 'selected' : ''}`} key={element.id} onClick={()=>handleItemClick(element)}>
                               <span>
                               {element.icon} 
                               </span>

@@ -17,7 +17,7 @@ const data = {
     ],
     datasets: [ {
       label: 'Personnality',
-      data: [40,40,40,40,30,40],
+      data: [39,39,39,38,37,39],
       fill: false,
       backgroundColor: 'rgb(54, 162, 235)',
       borderColor: 'rgb(54, 162, 235)',

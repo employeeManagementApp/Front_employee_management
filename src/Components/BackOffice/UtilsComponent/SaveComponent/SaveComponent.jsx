@@ -64,7 +64,7 @@ const SaveComponent = () => {
 
     try{
         const response = await axios.post(`${baseUrl}/user/new`, employeeObject)
-        console.log(response);
+        //console.log(response);
     }catch(err){
         console.log(err);
     }
