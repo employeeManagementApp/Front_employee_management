@@ -1,11 +1,7 @@
-import React from "react"
+import React from 'react'
 
-const DefaultField = ()=>{
-    return(
-        <div>
-            Welcome to the Admin's Dashboard
-        </div>
-    )
+const DefaultField = () => {
+  return <div>Welcome to the Admin's Dashboard</div>
 }
 
-export default DefaultField;
+export default DefaultField

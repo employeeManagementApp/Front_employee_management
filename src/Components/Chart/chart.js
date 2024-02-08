@@ -29,5 +29,6 @@ const MyChart = () => (
     <Line className="own-agenda" data={data} />
   </div>
 )
+module.exports=MyChart;
 
 export default MyChart

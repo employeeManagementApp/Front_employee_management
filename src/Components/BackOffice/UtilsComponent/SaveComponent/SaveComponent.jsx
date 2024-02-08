@@ -1,11 +1,7 @@
-import React from "react";
+import React from 'react'
 
-const SaveComponent = ()=>{
-    return(
-        <div>
-            saveComponent
-        </div>
-    )
+const SaveComponent = () => {
+  return <div>saveComponent</div>
 }
 
-export default SaveComponent;
+export default SaveComponent
