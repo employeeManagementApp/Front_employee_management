@@ -5,7 +5,6 @@ import NotFound from '../Pages/NotFound.jsx';
 import LoginPage from '../Pages/LoginPage.jsx';
 import Home from '../Pages/Home.jsx';
 import Page from '../Pages/Page.jsx';
-import Profil from '../Components/Profil/Profil.jsx';
 import PrivateRoute from '../Components/PrivateRoute.jsx';
 
 

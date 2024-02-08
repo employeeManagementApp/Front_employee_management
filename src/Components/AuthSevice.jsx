@@ -1,8 +1,8 @@
-import axios from "axios";
-import React from "react";
+import axios from 'axios'
+import React from 'react'
 
-const isAuthenticated = () =>{
-    const userToken = localStorage.getItem('ematoken');
-  return !!userToken; 
+const isAuthenticated = () => {
+  const userToken = localStorage.getItem('ematoken')
+  return !!userToken
 }
-export default isAuthenticated;
+export default isAuthenticated

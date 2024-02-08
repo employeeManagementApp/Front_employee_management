@@ -1,15 +1,14 @@
-.calendar{
-    width: 100%;
-    height: 34vh;
+.calendar {
+  width: 100%;
+  height: 34vh;
 }
-.cell{
-    width: 50px;
-    height: 50px;
-
+.cell {
+  width: 50px;
+  height: 50px;
 }
-.day-head{
-    font-size: 10px;
+.day-head {
+  font-size: 10px;
 }
-.events{
-    width: 100%;
+.events {
+  width: 100%;
 }
