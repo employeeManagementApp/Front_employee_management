@@ -6,6 +6,9 @@ import LoginPage from '../Pages/LoginPage.jsx';
 import Home from '../Pages/Home.jsx';
 import Page from '../Pages/Page.jsx';
 import PrivateRoute from '../Components/PrivateRoute.jsx';
+import AuthentRoute from '../Components/AuthentRoute.jsx';
+import BackOffice from '../Pages/BackOffice.jsx';
+
 
 
 function App() {
@@ -15,7 +18,8 @@ function App() {
   <Route exact path='/' element={<LoginPage></LoginPage>}/>
   <Route path='/home' element={<PrivateRoute Component={Home}></PrivateRoute>} />
     <Route exact path='/*' element={<NotFound></NotFound>}/>
-    <Route path='/page' element={<PrivateRoute Component={Page}></PrivateRoute>} />
+    <Route path='/page' element={<AuthentRoute Component={Page} role="Employe" ></AuthentRoute>} />
+    <Route path='/backoffice' element={<AuthentRoute Component={BackOffice}  role="Admin"></AuthentRoute>} />
   </Routes>
 </Router>
   );

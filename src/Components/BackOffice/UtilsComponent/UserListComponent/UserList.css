@@ -1,0 +1,21 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin: auto auto;
+    width: max-content;
+    margin-top: 2rem;
+}
+
+.item{
+    width: 17vw;
+    height: 15vh;
+    box-shadow: 1px 1px 12px #dbdbdb8c;
+    border-radius: 10px;
+    text-align: center;
+    background: #ffffffa1;
+}
+.search-barre{
+    height: 5vh;
+    margin-left: 2rem;
+}

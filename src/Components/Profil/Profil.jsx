@@ -13,16 +13,36 @@ import Chartt from '../Chart/chart.js'
 import Chart2 from '../Chart2/chart2.js'
 import Calendar from '../Calendar/Calendar'
 import Avatar from '../../pictures/avatar.png'
+import { useState, useEffect } from 'react'
+import { jwtDecode } from 'jwt-decode'
+import axios from 'axios'
 
 function Profil() {
+  const [user, setUser] = useState()
+  const [error, setError] = useState()
+  const baseUrl = process.env.REACT_APP_BASE_URL
+  useEffect(() => {
+    const token = localStorage.getItem('ematoken')
+    if (token) {
+      const decodedToken = jwtDecode(token)
+      const userId = decodedToken.id
+      axios
+        .get(`${baseUrl}/user/${userId}`)
+        .then((response) => {
+          setUser(response.data)
+        })
+        .catch((err) => {
+          setError(err)
+        })
+    }
+  }, [])
   return (
     <main>
       <div class="profil">
         <section class="section1">
           <div class="first">
             <a href="">
-              {' '}
-              <TfiLineDouble class="linedouble" />{' '}
+              <TfiLineDouble class="linedouble" />
             </a>
           </div>
           <div class="second">
@@ -34,7 +54,7 @@ function Profil() {
             <a href="">
               <CgMenuGridO class="menu" />
             </a>
-            <a href="">
+            <a href="#">
               <FaRegEnvelope class="menu" />
             </a>
             <a href="">
@@ -60,7 +80,6 @@ function Profil() {
                 </select>
               </div>
             </div>
-
             <div class="search">
               <CiSearch class="icon" />
               <input type="text" placeholder="Search" />
@@ -74,31 +93,71 @@ function Profil() {
               </a>
             </div>
           </div>
-          <div className="middle">
-            <div className="middle-left">
-              <div class="person-profil">
-                <div class="name-email">
-                  <h3 class="name">Patrick Kennedy</h3>
-                  <p class="email">hei.Patrick@gmail.com</p>
+          <div class="middle">
+            <div class="middle-left">
+              {user && (
+                <div class="person-profil">
+                  <div class="name-email">
+                    <h3 class="name">
+                      {user.firstname} {user.lastname}
+                    </h3>
+                    <p class="email">{user.email}</p>
+                  </div>
+                  <div class="photo">
+                    <img src={Avatar} alt="" class="imge" />
+                  </div>
                 </div>
-                <div class="photo">
-                  <img src={Avatar} alt="" class="imge" />
-                </div>
-              </div>
+              )}
               <Chartt></Chartt>
               <Chart2></Chart2>
             </div>
-            <div className="middle-right">
-              <div className="right-top">
-                <div className="rt-left"></div>
-                <div className="rt-right"></div>
+            <div class="middle-right">
+              <div class="right-top">
+                <div class="rt-left"></div>
+                <div class="rt-right"></div>
               </div>
-              <div className="right-bottom">
+              <div class="right-bottom">
                 <Calendar></Calendar>
               </div>
             </div>
           </div>
         </section>
+      </div>
+      <div class="search">
+        <CiSearch class="icon" />
+        <input type="text" placeholder="Search" />
+      </div>
+      <div class="notiMessage">
+        <a href="">
+          <FiMessageCircle />
+        </a>
+        <a href="">
+          <IoMdNotifications />
+        </a>
+      </div>
+      <div class="middle">
+        <div class="middle-left">
+          <div class="person-profil">
+            <div class="name-email">
+              <h3 class="name">Patrick Kennedy</h3>
+              <p class="email">hei.Patrick@gmail.com</p>
+            </div>
+            <div class="photo">
+              <img src={Avatar} alt="" class="imge" />
+            </div>
+          </div>
+          <Chartt></Chartt>
+          <Chart2></Chart2>
+        </div>
+        <div class="middle-right">
+          <div class="right-top">
+            <div class="rt-left"></div>
+            <div class="rt-right"></div>
+          </div>
+          <div class="right-bottom">
+            <Calendar></Calendar>
+          </div>
+        </div>
       </div>
     </main>
   )

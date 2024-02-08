@@ -137,7 +137,10 @@ body {
 .register-link p {
   font-size: small;
 }
-
 input[type='checkbox'] {
   border: 2px solid rgb(138, 43, 226);
+}
+.error-message {
+  text-align: center;
+  color: red;
 }
