@@ -14,7 +14,7 @@ export const ActionList = [
     },
     {
         id: 2,
-        title: 'Add new Employe',
+        title: 'Add new Employee',
         component: () => <SaveComponent />,
         icon: <FaUserPlus></FaUserPlus>
     },

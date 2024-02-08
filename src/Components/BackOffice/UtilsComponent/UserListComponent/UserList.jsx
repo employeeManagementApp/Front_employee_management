@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Avatar from "../../../../pictures/avatar.png"
 import "./UserList.css";
 
 const UserList = () => {
@@ -41,6 +42,7 @@ const UserList = () => {
       <div className="grid-container">
         {filteredData.map((user) => (
           <div className="item" key={user.id}>
+               <div class="photo user-img-list"><img src={Avatar} alt="" class="imge" /></div>
             {user.firstname}
             <p>{user.lastname}</p>
             <p>{user.email}</p>
