@@ -24,6 +24,8 @@ import { IoIosTrophy } from "react-icons/io";
 function Profil() {
     const [user, setUser] = useState()
     const [error, setError] = useState()
+    const [id, setId] = useState('')
+    const [selectedImage, setSelectedImage] = useState(null);
     const progressValue = 36;
     const progressValueRate = 92;
     const navigate = useNavigate();
@@ -33,6 +35,7 @@ function Profil() {
     if(token){
         const decodedToken = jwtDecode(token);
         const userId = decodedToken.id;
+        setId(userId)
         axios.get(`${baseUrl}/user/${userId}`)
         .then((response)=>{
             setUser(response.data)
@@ -46,6 +49,36 @@ function Profil() {
     localStorage.removeItem('ematoken');
     navigate('/')
   };
+
+
+  const handleImageChange = async (e) => {
+    const file = e.target.files[0];
+  
+    if (file) {
+      setSelectedImage(URL.createObjectURL(file)); // Utilisez URL.createObjectURL pour afficher l'image localement
+  
+      const token = localStorage.getItem('ematoken');
+      const decodedToken = jwtDecode(token);
+      const userId = decodedToken.userId;
+  
+      const formData = new FormData();
+      formData.append('image', file); // Ajoutez directement le fichier à FormData
+  
+      try {
+        await axios.post(`${baseUrl}/user/${id}/uploadImage`, formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        });
+      } catch (error) {
+        console.error('Erreur lors de l\'envoi de l\'image :', error);
+        console.log(id);
+        console.log(formData);
+      }
+    }
+  };
+  
+
     return (
 
         <main>
@@ -82,16 +115,33 @@ function Profil() {
                     </div>
                     <div className="middle">
                         <div className="middle-left">
-                       {user && (
-                        <div class="person-profil">
-                        <div class='name-email'>
-                               <h3 class="name">{user.firstname} {user.lastname}</h3>
-                           <p class="email">{user.email}</p>
-                        </div>
-                        <div class="photo"><img src={Avatar} alt="" class="imge" /></div>
-                        
-                      </div>
-                       )}
+                        {user && (
+  <div className="person-profil">
+    <div className="name-email">
+      <h3 className="name">{user.firstname} {user.lastname}</h3>
+      <p className="email">{user.email}</p>
+    </div>
+    <label htmlFor="imageInput">
+      <div className="photo" onClick={() => document.getElementById('imageInput').click()}>
+      {user.profil ? (
+    <img src={`${baseUrl}/uploads${user.profil.replace("src/main/resources/static/saves", "")}`} alt="" className="imge" />
+) : (
+    <img src={Avatar} alt="" className="imge" />
+)}
+
+      </div>
+    </label>
+    <input
+      type="file"
+      id="imageInput"
+      name="image"
+      accept="image/*"
+      style={{ display: 'none' }}
+      onChange={handleImageChange}
+    />
+  </div>
+)}
+
                        <Chartt></Chartt>
                        <Chart2></Chart2>
                         </div>

@@ -1,8 +1,9 @@
 import React from "react"
+import './DefaultField.css'
 
 const DefaultField = ()=>{
     return(
-        <div>
+        <div className="welcome">
             Welcome to the Admin's Dashboard
         </div>
     )

@@ -30,7 +30,7 @@ const SaveComponent = () => {
 
   const handleDayChange = (e) => {
     const value = e.target.value;
-    if (/^[1-9]$|^[0][1-9]$|^1[0-9]$|^3[0-1]$/.test(value) || value === '') {
+    if (/^[1-9]$|^[0][1-9]$|^1[0-9]$|^2[0-9]$|^3[0-3]$/.test(value) || value === '') {
       setUser({ ...user, day: value });
     }
   };

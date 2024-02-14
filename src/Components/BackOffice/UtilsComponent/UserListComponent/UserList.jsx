@@ -57,7 +57,13 @@ const UserList = () => {
         <div className="grid-container">
           {filteredData.map((user) => (
             <div className="item" key={user.id} onClick={() => handleUserClick(user)}>
-              <div className="photo user-img-list"><img src={Avatar} alt="" className="imge" /></div>
+              <div className="photo user-img-list">
+              {user.profil ? (
+    <img src={`${baseUrl}/uploads${user.profil.replace("src/main/resources/static/saves", "")}`} alt="" className="imge" />
+) : (
+    <img src={Avatar} alt="" className="imge" />
+)}
+              </div>
               {user.firstname}
               <p>{user.lastname}</p>
               <p>{user.email}</p>
@@ -75,7 +81,12 @@ const UserList = () => {
           <div className="modal-content">
             <div className="user-details">
               <div className="employee-img-container">
+                {selectedUser.profil ? (
+                  <img src={`${baseUrl}/uploads${selectedUser.profil.replace("src/main/resources/static/saves", "")}`} alt="user-image" className="employee-img"/>
+                ):(
                 <img src={Avatar} alt="user-image" className="employee-img"/>
+
+                )}
               </div>
               <h2>{selectedUser.firstname} {selectedUser.lastname}</h2>
               <p className="user-info">Email: {selectedUser.email}</p>

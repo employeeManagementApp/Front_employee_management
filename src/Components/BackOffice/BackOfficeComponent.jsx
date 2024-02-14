@@ -25,6 +25,8 @@ function BackOfficeComponent() {
     const [selectedItem, setSelectedItem] = useState(null);
     const [user, setUser] = useState()
     const [error, setError] = useState()
+    const [selectedImage, setSelectedImage] = useState(null);
+    const [id, setId] = useState('')
     const navigate = useNavigate()
     const baseUrl = process.env.REACT_APP_BASE_URL; 
 
@@ -37,6 +39,7 @@ function BackOfficeComponent() {
     if(token){
         const decodedToken = jwtDecode(token);
         const userId = decodedToken.id;
+        setId(userId)
         axios.get(`${baseUrl}/user/${userId}`)
         .then((response)=>{
             setUser(response.data)
@@ -46,7 +49,33 @@ function BackOfficeComponent() {
         })
     }
   }, [])
-
+  const handleImageChange = async (e) => {
+    const file = e.target.files[0];
+  
+    if (file) {
+      setSelectedImage(URL.createObjectURL(file)); // Utilisez URL.createObjectURL pour afficher l'image localement
+  
+      const token = localStorage.getItem('ematoken');
+      const decodedToken = jwtDecode(token);
+      const userId = decodedToken.userId;
+  
+      const formData = new FormData();
+      formData.append('image', file); // Ajoutez directement le fichier à FormData
+  
+      try {
+        await axios.post(`${baseUrl}/user/${id}/uploadImage`, formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        });
+      } catch (error) {
+        console.error('Erreur lors de l\'envoi de l\'image :', error);
+        console.log(id);
+        console.log(formData);
+      }
+    }
+  };
+  
   const handleLogout = () => {
     localStorage.removeItem('ematoken');
     navigate('/')
@@ -93,7 +122,23 @@ function BackOfficeComponent() {
                                <h3 class="name">{user.firstname} {user.lastname}</h3>
                            <p class="email">{user.email}</p>
                         </div>
-                        <div class="photo"><img src={Avatar} alt="" class="imge" /></div>
+                        <label htmlFor="imageInputs">
+                        <div class="photo">
+                        {user.profil ? (
+    <img src={`${baseUrl}/uploads${user.profil.replace("src/main/resources/static/saves", "")}`} alt="" className="imge" />
+) : (
+    <img src={Avatar} alt="" className="imge" />
+)}
+                            </div>
+                            </label>
+                            <input
+      type="file"
+      id="imageInputs"
+      name="image"
+      accept="image/*"
+      style={{ display: 'none' }}
+      onChange={handleImageChange}
+    />
                       </div>
                         
                        )}
