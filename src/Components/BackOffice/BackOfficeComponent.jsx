@@ -75,7 +75,7 @@ function BackOfficeComponent() {
                            
                         </div>
                         <div class="notiMessage">
-                            <a href=""><FiMessageCircle /></a><a href=""><IoMdNotifications /></a>
+                            <a href=""><FiMessageCircle /></a><a href="http://localhost:3000/notification"><IoMdNotifications /></a>
                         </div>
                     </div>
                     <div className="middle">

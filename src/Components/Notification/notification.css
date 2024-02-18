@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(235, 235, 234);
+}
+
+.notif{
+
+    width: 70%;
+    height: 90vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  
+}
+.notification{
+    width: 95%;
+    height: 10%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+  
+    justify-content: space-between;
+
+}
+.notif a{
+    color: black;
+    font-size: larger;
+}
+.content{
+    background-color: white;
+    width: 95%;
+    height:90%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+.message{
+
+    width: 100%;
+    height: 16%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: rgba(0, 0, 0, 0.394) 1px solid ;
+  margin-bottom: 20px;
+
+
+}
+.title {
+    border: 1px solid rgb(4, 236, 4);
+    background-color: rgb(4, 236, 4);
+    border-radius: 2px;
+    width: max-content;
+    color: white;
+    font-size:smaller;
+    padding: 2px;
+}
+.mess1{
+  
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.title{
+  margin-bottom: 5px;  
+}
+.mess2{
+    font-size: small;
+    width: 90%;
+
+}
+.time{
+  font-size: small;
+  color: rgba(0, 0, 0, 0.555);
+
+}

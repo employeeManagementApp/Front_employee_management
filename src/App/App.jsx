@@ -9,6 +9,7 @@ import Profil from '../Components/Profil/Profil.jsx';
 import PrivateRoute from '../Components/PrivateRoute.jsx';
 import AuthentRoute from '../Components/AuthentRoute.jsx';
 import BackOffice from '../Pages/BackOffice.jsx';
+import Notification from '../Components/Notification/notification.jsx';
 
 
 
@@ -21,6 +22,7 @@ function App() {
     <Route exact path='/*' element={<NotFound></NotFound>}/>
     <Route path='/page' element={<AuthentRoute Component={Page} role="Employe" ></AuthentRoute>} />
     <Route path='/backoffice' element={<AuthentRoute Component={BackOffice}  role="Admin"></AuthentRoute>} />
+    <Route path='/notification' element={<Notification></Notification>} />
   </Routes>
 </Router>
   );
