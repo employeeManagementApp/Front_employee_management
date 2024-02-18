@@ -1,0 +1,62 @@
+.project-details{
+    width: 90%;
+    margin-left: 2rem;
+}
+.project-details h2, .project-description{
+    margin-bottom: 1rem;
+}
+.search-user{
+    margin-bottom: 1rem;
+    margin-left: 0;
+}
+.search-result{
+    margin-bottom: 1.7rem;
+}
+.add-contributor{
+    padding-block: 0.5rem;
+    padding-inline: 1.3rem;
+    background: #8b8bef;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+}
+.contributor-profil{
+    display: flex;
+    flex-direction: row-reverse;
+    box-shadow: 1px 1px 12px #dbdbdb8c;
+    font-size: 12px;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 13vw;
+    margin-bottom: 7px;
+    padding: 3px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.contributor-img{
+   margin: 0;
+}
+.remove-contributor{
+    position: relative;
+    width: 17px;
+    height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 1px 1px 12px #1919198c;
+    border-radius: 50%;
+    top: 15px;
+    color: rgb(53, 53, 53);
+    cursor: pointer;
+}
+.contributor{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.selected-contributors{
+    display: flex;
+    gap: 25px;
+    margin-bottom: 1rem;
+}

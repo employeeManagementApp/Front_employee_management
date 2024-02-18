@@ -4,12 +4,28 @@
     box-shadow: 1px 1px 12px #dbdbdb8c;
     border-radius: 10px;
     background: #ffffffa1;
+    overflow: auto;
+    padding-bottom: 1rem;
 }
 .list-action{
     list-style: none;
-    margin-left: 1rem;
-    margin-block: 1rem;
+    padding-left: 1rem;
+    /* margin-block: 1rem; */
+    height: 35px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 .list-action span{
     padding-right: .6rem;
 }
+.underline{
+    width: 80%;
+    height: 1px;
+    background-color: #d5d5d5;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+.list-action.selected {
+    background-color: #e4e9fb;
+  }

@@ -1,0 +1,56 @@
+.big-title{
+    margin-left: 2rem;
+    margin-block: .5rem;
+}
+.name-input-container{
+    display: flex;
+    width: 90%;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    margin-left: 2rem;
+}
+.name-input{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.input-case{
+    border: 1px solid #d5cfcf;
+    width: 15vw;
+    height: 35px;
+    border-radius: 4px;
+    padding-left: 1rem;
+}
+.date-input-container{
+    display: flex;
+    width: 90%;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    margin-left: 2rem;
+}
+.gender-input-container{
+    display: flex;
+    width: 24%;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    margin-left: 2rem;
+}
+h4{
+    margin-left: 2rem;
+    margin-bottom: .3rem;
+}
+.phone-input-container{
+    display: flex;
+    width: 60%;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    margin-left: 2rem;
+}
+.add-employe{
+    margin-left: 2rem;
+    padding-block: 0.5rem;
+    padding-inline: 1.3rem;
+    background: #8b8bef;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+}
